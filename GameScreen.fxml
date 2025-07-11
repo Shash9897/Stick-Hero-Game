@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="532.0" prefWidth="285.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.GameController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <StackPane onKeyPressed="#handleKeyPressed" onKeyReleased="#handleKeyReleased" onMousePressed="#handleMousePressed" onMouseReleased="#handleMouseReleased" prefHeight="150.0" prefWidth="200.0">
+        <children>
+            <ImageView fitHeight="519.0" fitWidth="274.0">
+                <image>
+                    <Image url="@stickhero.jpg" />
+                </image>
+            </ImageView>
+            <ImageView fx:id="heroImageView" fitHeight="28.0" fitWidth="28.0" translateX="-125.0" translateY="50.0">
+                <image>
+                    <Image url="@hero.png" />
+                </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="26.0" translateX="115.0" translateY="-237.0">
+                <image>
+                    <Image url="@cherry.png" />
+                </image>
+            </ImageView>
+            <Box fx:id="stickBox" depth="50" height="0" translateX="-114.0" translateY="65.0" width="3.0">
+                <material>
+                    <PhongMaterial diffuseColor="BLACK" />
+                </material>
+            </Box>
+
+            <Box fx:id="initialContainer" depth="100" height="195.0" translateX="-125.0" translateY="162.0" width="25.0">
+                <material>
+                    <PhongMaterial diffuseColor="BLACK" />
+                </material>
+            </Box>
+            <Box fx:id="randomContainer" depth="100" height="195.0" translateX="-50.0" translateY="162.0" width="50.0">
+                <material>
+                    <PhongMaterial diffuseColor="BLACK" />
+                </material>
+            </Box>
+            <Box depth="100" height="50.0" translateY="-210.0" width="50.0" />
+            <Text fx:id="scoreText" strokeType="OUTSIDE" strokeWidth="0.0" text="0" translateX="5.0" translateY="-210.0" wrappingWidth="20.8837890625" />
+            <Text fx:id= "cherryText" strokeType="OUTSIDE" strokeWidth="0.0" text="0" translateX="90.0" translateY="-233.0" />
+            <Box fx:id="Bonus" depth="100.0" height="5.0" translateX="75.0" translateY="67.0" width="7.0">
+                <material>
+                    <PhongMaterial diffuseColor="RED" />
+                </material>
+            </Box>
+            <Button fx:id="pauseButton" onAction="#handlePauseButtonClick" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: transparent;" translateX="-115.0" translateY="-240.0">
+                <graphic>
+                    <ImageView fx:id="pauseImageView" fitHeight="25.0" fitWidth="22.0">
+                        <image>
+                            <Image url="@pause.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <ImageView fx:id="cherryImageView" fitHeight="19.0" fitWidth="21.0">
+                <image>
+                    <Image url="@cherry.png" />
+                </image>
+            </ImageView>
+            <Text fx:id="bonusText" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Bonus!" translateX="25.0" translateY="-100.0" visible="false" wrappingWidth="111.720703125">
+                <font>
+                    <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+                </font>
+            </Text>
+         <ImageView fx:id="heroImageView1" fitHeight="28.0" fitWidth="28.0" rotate="180.0" translateX="-126.0" translateY="80.0">
+            <image>
+               <Image url="@hero.png" />
+            </image>
+         </ImageView>
+        </children>
+    </StackPane>
+</VBox>
